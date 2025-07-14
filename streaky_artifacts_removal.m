@@ -1,6 +1,10 @@
 function [cleaned_kspace, streaky_coil_indices] = streaky_artifacts_removal(kspace_slice, slice_idx, frame_range)
 % REMOVE_STREAKY_ARTIFACTS Removes streaky artifacts from single-slice k-space MRI data
 %
+% Author: Dima Bishara
+% Email: dimabishara2026@u.northwestern.edu
+% Institution: Northwestern University
+%
 % This function identifies and removes streaky artifacts in k-space data for a single slice by:
 % 1. Applying a high-pass filter to isolate high-frequency components
 % 2. Thresholding and computing energy ratios for each coil to identify streaky coils
