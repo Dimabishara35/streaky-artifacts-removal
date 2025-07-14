@@ -69,7 +69,7 @@ function [cleaned_kspace, streaky_coil_indices] = streaky_artifacts_removal(kspa
     % Calculate 95th percentile of filtered high-frequency content for each coil
     for coil_idx = 1:num_coils
         filtered_data = first_frame_data(:, :, coil_idx) .* highpass_filter;
-        percentile_values(coil_idx) = prctile(abs(filtered_data(:)), 98);
+        percentile_values(coil_idx) = prctile(abs(filtered_data(:)), 95);
     end
     
     % Use median as robust threshold estimate
